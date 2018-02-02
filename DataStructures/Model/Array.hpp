@@ -27,6 +27,7 @@ public:
     
     //Copy Constructor
     Array<Type>(const Array<Type> & toCopy);
+    
     //Destructor
     ~Array<Type>();
     
@@ -50,6 +51,7 @@ Array<Type> :: Array(int size)
     internalArray = new Type[size];
 }
 
+//This code takes the values in the Array and assignes a copy of it.
 template <class Type>
 Array<Type> :: Array(const Array<Type> & toCopy)
 {
@@ -70,6 +72,7 @@ Array<Type> :: ~Array()
     delete [] internalArray;
 }
 
+// Than reassign the array if (&toAssign != this)
 template <class Type>
 Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 {
@@ -90,20 +93,24 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
     return *this;
 }
 
-template <class Type>
+
+// & Type referencce =  left side square brackets. You can change the value if you have access to the reference. Right had sideType Array with no reference opperator
+
+template <class Type>// Left hand of = sign -- assigns to reference
 Type & Array<Type> :: operator [] (int index)
 {
     assert(intex >= 0 && index < size);
     return inernalArray[index];
 }
 
-template <class Type>
+template <class Type> // Right hand of = sign -- copy
 Type Array<Type :: operator [] (int inde) const
 {
     assert(index >= 0 && index < size);
     return internal Array[index];
 }
 
+// Return the size
 template <class Type>
 int Array<Type> :: getSize() const
 {
