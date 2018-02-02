@@ -90,4 +90,20 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
     return *this;
 }
 
+template <class Type>
+Type & Array<Type> :: operator [] (int index)
+{
+    assert(intex >= 0 && index < size);
+    return inernalArray[index];
+}
+
+template <class Type>
+Type Array<Type :: operator [] (int inde) const
+{
+    assert(index >= 0 && index < size);
+    return internal Array[index];
+}
+
+
+
 #endif /* Array_hpp */
