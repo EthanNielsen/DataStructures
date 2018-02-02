@@ -62,7 +62,14 @@ Array<Type> :: Array(const Array<Type> & toCopy)
     {
         internalArray[index] = toCopy[index];
     }
-    
 }
+
+template <class Type>
+Array<Type> :: ~Array()
+{
+    delete [] internalArray;
+}
+
+
 
 #endif /* Array_hpp */
