@@ -17,7 +17,7 @@ using namespace std;
 template <class Type>
 class Array
 {
-private;
+private:
     Type * internalArray;
     int size;
     
@@ -40,7 +40,7 @@ public:
     int getSize() const;
     Type getFromIndex(int index);
     void setAtIndex(int index, Type data);
-}
+};
 
 template <class Type>
 Array<Type> :: Array(int size)
@@ -87,7 +87,7 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
         
         for (int index = 0; index < size; index++)
         {
-            internalArray[index] = Assign[index];
+            internalArray[index] = toAssign[index];
         }
     }
     return *this;
@@ -99,15 +99,15 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 template <class Type>// Left hand of = sign -- assigns to reference
 Type & Array<Type> :: operator [] (int index)
 {
-    assert(intex >= 0 && index < size);
-    return inernalArray[index];
+    assert(index >= 0 && index < size);
+    return internalArray[index];
 }
 
 template <class Type> // Right hand of = sign -- copy
-Type Array<Type :: operator [] (int inde) const
+Type Array<Type> :: operator [] (int index) const
 {
     assert(index >= 0 && index < size);
-    return internal Array[index];
+    return internalArray[index];
 }
 
 // Return the size

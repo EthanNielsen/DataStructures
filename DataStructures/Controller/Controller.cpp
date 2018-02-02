@@ -15,7 +15,7 @@ void Controller :: start()
 {
     findMaxAndMin();
     
-    
+    testArray();
 }
 
 void Controller :: findMaxAndMin()

@@ -129,9 +129,17 @@
 		28196C0D2024F5F400086CE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				28196C0F2024F64200086CE6 /* Array.hpp */,
+				28196C12202502DD00086CE6 /* Structures */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		28196C12202502DD00086CE6 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				28196C0F2024F64200086CE6 /* Array.hpp */,
+			);
+			path = Structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
