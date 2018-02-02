@@ -14,12 +14,12 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     string currentCSVLine;
     int rowCount = 0;
     
-    ifstream dataFile(filename)
+    ifstream dataFile(filename);
     
     //Checks if the file is at the same path.
-    if (datafile.is_open())
+    if (dataFile.is_open())
     {
-        while (!dataFile.eof());
+        while (!dataFile.eof())
         {
             getline(dataFile, currentCSVLine, '\n');
             

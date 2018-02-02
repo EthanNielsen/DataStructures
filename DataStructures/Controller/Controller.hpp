@@ -20,5 +20,5 @@ private:
     void findMaxAndMin();
 public:
     void start();
-}
+};
 #endif /* Controller_hpp */
