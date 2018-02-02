@@ -43,3 +43,13 @@ void Controller :: findMaxAndMin()
     cout << "The largest Crime stat is at " << maxIndex << " and it is: " << myData[maxIndex] << endl;
     searchTimer.displayInformation();
 }
+
+void Controller :: testArray()
+{
+    Array<int>ethanArray(65);
+    
+    ethanArray[0] = 123;
+    ethanArray.setAtIndex(0, 321);
+    
+    cout << ethanArray[0] << endl;
+}
