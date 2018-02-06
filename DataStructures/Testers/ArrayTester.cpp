@@ -37,3 +37,11 @@ void ArrayTester :: testArrayUse()
     cout << thirdArray[5] << endl;
     
 }
+
+void ArrayTester :: testAdvancedArray()
+{
+    
+    vector<CrimeData> test = 
+}
+
+

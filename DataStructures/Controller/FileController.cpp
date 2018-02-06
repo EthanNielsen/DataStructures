@@ -39,5 +39,6 @@ vector<CrimeData> FileController :: readCrimeDataToVector(string filename)
     {
         cerr << "NO FILE" << endl;
     }
+    
     return crimeVector;
 }
