@@ -12,6 +12,7 @@
 		28196C022024EAF600086CE6 /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28196C002024EAF600086CE6 /* Controller.cpp */; };
 		28196C052024EB2500086CE6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28196C032024EB2500086CE6 /* Timer.cpp */; };
 		28196C092024EBF500086CE6 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28196C082024EBF500086CE6 /* CrimeData.cpp */; };
+		28612344202A33B1003AD87B /* ArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28612342202A33B1003AD87B /* ArrayTester.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		28196C072024EBF500086CE6 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
 		28196C082024EBF500086CE6 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		28196C0F2024F64200086CE6 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		28612342202A33B1003AD87B /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
+		28612343202A33B1003AD87B /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,7 @@
 		28196BEB2024EA1200086CE6 /* DataStructures */ = {
 			isa = PBXGroup;
 			children = (
+				28612341202A338C003AD87B /* Testers */,
 				28196BFB2024EA9E00086CE6 /* Runner.cpp */,
 				28196BF62024EA2900086CE6 /* Diagrams */,
 				28196BF52024EA2300086CE6 /* Data */,
@@ -142,6 +146,15 @@
 			path = Structures;
 			sourceTree = "<group>";
 		};
+		28612341202A338C003AD87B /* Testers */ = {
+			isa = PBXGroup;
+			children = (
+				28612342202A33B1003AD87B /* ArrayTester.cpp */,
+				28612343202A33B1003AD87B /* ArrayTester.hpp */,
+			);
+			path = Testers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -203,6 +216,7 @@
 				28196C092024EBF500086CE6 /* CrimeData.cpp in Sources */,
 				28196BFF2024EAE900086CE6 /* FileController.cpp in Sources */,
 				28196C052024EB2500086CE6 /* Timer.cpp in Sources */,
+				28612344202A33B1003AD87B /* ArrayTester.cpp in Sources */,
 				28196C022024EAF600086CE6 /* Controller.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

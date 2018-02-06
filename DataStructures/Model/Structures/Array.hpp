@@ -18,8 +18,8 @@ template <class Type>
 class Array
 {
 private:
-    Type * internalArray;
-    int size;
+    Type * internalArray; // Data member for an arrray
+    int size; // Makes life easy for us by maintaining this information.
     
 public:
     //Constructor
@@ -32,7 +32,7 @@ public:
     ~Array<Type>();
     
     //Operators
-    Array<Type> & operator = (const Array<Type> & toReplace);
+    Array<Type> & operator = (const Array<Type> & toReplace); //This is how the array will act
     Type& operator [] (int index);
     Type operator [] (int index) const;
     
@@ -45,8 +45,8 @@ public:
 template <class Type>
 Array<Type> :: Array(int size)
 {
-    assert(size >  0);
-    this->size = size;
+    assert(size >  0); // Only assign positive values, no zero or negative numbers.
+    this->size = size; // -> is the selector meaning thisis a pointer.
     
     internalArray = new Type[size];
 }
@@ -74,7 +74,7 @@ Array<Type> :: ~Array()
 
 // Than reassign the array if (&toAssign != this)
 template <class Type>
-Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
+Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign) // using the operator means that me as a coder needs to play attention to what this code is saying.
 {
     if (&toAssign != this)
     {
@@ -94,7 +94,7 @@ Array<Type> & Array<Type> :: operator = (const Array<Type> & toAssign)
 }
 
 
-// & Type referencce =  left side square brackets. You can change the value if you have access to the reference. Right had sideType Array with no reference opperator
+// "& Type" referencce =  left side square brackets. You can change the value if you have access to the reference. Right had sideType Array with no reference opperator
 
 template <class Type>// Left hand of = sign -- assigns to reference
 Type & Array<Type> :: operator [] (int index)
@@ -117,6 +117,7 @@ int Array<Type> :: getSize() const
     return size;
 }
 
+// Gettter, Stores the variable and returns the variable.
 template <class Type>
 Type Array<Type> :: getFromIndex(int index)
 {
@@ -127,6 +128,7 @@ Type Array<Type> :: getFromIndex(int index)
     return value;
 }
 
+// Setter
 template <class Type>
 void Array<Type> :: setAtIndex(int pos, Type item)
 {
