@@ -13,6 +13,7 @@ using namespace std;
 // The code below sorts through all the Crime Data and finds the larges and smallest part of it.
 void Controller :: start()
 {
+    ArrayTester myTest;
     findMaxAndMin();
     
     testArray();
@@ -43,12 +44,12 @@ void Controller :: findMaxAndMin()
     cout << "The largest Crime stat is at " << maxIndex << " and it is: " << myData[maxIndex] << endl;
     searchTimer.displayInformation();
     
-    
-    for (int i = 200; i < 216; i++)
-    {
-        cout << myData[i] << endl;
-    }
-    
+//
+//    for (int i = 200; i < 216; i++)
+//    {
+//        cout << myData[i] << endl;
+//    }
+//
 }
 
 void Controller :: testArray()
