@@ -12,7 +12,7 @@
 #include <assert.h>
 #include "../../Nodes/LinearNode.hpp"
 
-class abstractBase()
+class listStructure()
 {
 protected:
     int size;

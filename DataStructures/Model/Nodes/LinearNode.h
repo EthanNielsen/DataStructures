@@ -28,5 +28,45 @@ public:
 
 //Constructors
 
+/**
+ This constructor is used for building the raw structure bbefore values are known.
+ */
+template <class Type>
+LinearNode<Type> :: LinearNode() : Node<Type>()
+{
+    this->next = nullptr;
+}
+
+/**
+ This constructor is used to create a reference to an instance with data.
+ */
+template <class Type>
+LinearNode<Type> :: LinearNode(Type data) : Node<Type>(data)
+{
+    this->next = nullptr;
+}
+
+/**
+ This constructor is used to create a reference to a instance with data and a known link.
+ */
+template <class Type>
+LinearNode<Type> :: LinearNode(Type data, LinearNode<Type> * next) : Node<Type>(data)
+{
+    this->next = next;
+}
+
+//Accessor Methods
+
+template <class Type>
+void LinearNode<Type> :: setNextNode(LinearNode<Type> * nextNodePointer )
+{
+    this->next = nextNodePointer;
+}
+
+template <class Type>
+LinearNode<Type> * LinearNode<Type> :: getNextNode()
+{
+    return next;
+}
 
 #endif /* LinearNode_h */
