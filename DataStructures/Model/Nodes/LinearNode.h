@@ -26,5 +26,7 @@ public:
     LinearNode<Type> * getNextNode();
 };
 
+//Constructors
+
 
 #endif /* LinearNode_h */
