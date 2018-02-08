@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>140</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>LinearNode&lt;Type&gt;
+--
+- LinearNode&lt;Type&gt; * : next
+--
++LinearNode() : constructor
++LinearNode(Type data) : constructor
++LinearNode(Type data, LinearNode&lt;Type&gt; * next) : constructor
+
++setNextNode(LinearNode&lt;Type&gt; *) : void
++ getNextNode() : LinearNode&lt;Type&gt; *</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>240</x>
+      <y>240</y>
+      <w>30</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>210</x>
+      <y>360</y>
+      <w>210</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Node&lt;Type&gt;
+--
+#data : Type
+--
++Node() : constructor
++Node(Type data) : constructor
++getData() : Type
++setData(Type data) : void</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
