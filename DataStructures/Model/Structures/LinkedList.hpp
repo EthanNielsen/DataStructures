@@ -107,7 +107,63 @@ void LinkedListt<Type> :: addAtIndex(int index, Type item)
     }
 }
 
+Type LinkedList<Type> :: remove(int index)
+{
+    assert(index >= 0 && index < this->size);
+    
+    linearNode<Type> * current = front;
+    linearNode<Type> * toBeRemoved = nullptr;
+    linearNode<Type> * previous = nullptr;
+    
+    Type removedData;
+    
+    if (index == 0)
+    {
+        toBeRemoved = front;
+        this->front = this->front->getNextNode();
+    }
+    else
+    {
+        for (int posittion = 0; position < index; position++)
+        {
+            previous = current;
+            current = current->getNextNode();
+        }
+        
+        toBeRemoved = current;
+        
+        if (index == this->size - 1)
+        {
+            previous->setNextNode(nullptr);
+            end = previous;
+        }
+        else
+        {
+            current = toBeRemoved->getNextNode();
+            previous->setNextNode(current);
+        }
+    }
+    this->size -= 1;
+    
+    removedData = toBeRemoved->getData();
+    delete toBeRemoved;
+    return removedData;
+}
 
+LinearNode<Type> * LinkedList<Type> :: getEnd()
+{
+    return this->end;
+}
+
+LinearNode<Type> * LinkedList<Type> :: getFront()
+{
+    return this->front;
+}
+
+int LinkedList<Type> :: getSize() const
+{
+    return this->size;
+}
 
 #include <stdio.h>
 
