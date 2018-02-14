@@ -76,6 +76,37 @@ void LinkedList<Type> :: add(Type item)
     this->size += 1;
 }
 
+void LinkedListt<Type> :: addAtIndex(int index, Type item)
+{
+    assert(index >= 0 && index <= this->size);
+    if(index == this->size)
+    {
+        add(item);
+    }
+    else
+    {
+        LinearNode<Type> * toBeAdded = new LinearNode<Type>(item);
+        if (index == 0)
+        {
+            toBeAdded->setNextNode(front);
+            front = toBeAdded;
+        }
+        else
+        {
+            LinearNode<Type> * previous = nullptr;
+            LinearNode<Type> * current = front;
+            for (int position = 0; position < index; position++ )
+            {
+                previous = current;
+                current = current->getNextNode();
+            }
+            previous->setNextNode(toBeAdded);
+            toBeAdded->setNextNode(current);
+        }
+        this->size++;
+    }
+}
+
 
 
 #include <stdio.h>
