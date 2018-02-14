@@ -13,6 +13,7 @@
 		28196C052024EB2500086CE6 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28196C032024EB2500086CE6 /* Timer.cpp */; };
 		28196C092024EBF500086CE6 /* CrimeData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28196C082024EBF500086CE6 /* CrimeData.cpp */; };
 		28612344202A33B1003AD87B /* ArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28612342202A33B1003AD87B /* ArrayTester.cpp */; };
+		286926752034BBEC0096E432 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 286926732034BBEC0096E432 /* LinkedList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,6 +46,8 @@
 		28612342202A33B1003AD87B /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
 		28612343202A33B1003AD87B /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
 		28612347202A40CD003AD87B /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		286926732034BBEC0096E432 /* LinkedList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedList.cpp; sourceTree = "<group>"; };
+		286926742034BBEC0096E432 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 			children = (
 				28196C0F2024F64200086CE6 /* Array.hpp */,
 				284A5877202CE25700E8A43F /* listStructure.h */,
+				286926732034BBEC0096E432 /* LinkedList.cpp */,
+				286926742034BBEC0096E432 /* LinkedList.hpp */,
 			);
 			path = Structures;
 			sourceTree = "<group>";
@@ -232,6 +237,7 @@
 				28196C052024EB2500086CE6 /* Timer.cpp in Sources */,
 				28612344202A33B1003AD87B /* ArrayTester.cpp in Sources */,
 				28196C022024EAF600086CE6 /* Controller.cpp in Sources */,
+				286926752034BBEC0096E432 /* LinkedList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
