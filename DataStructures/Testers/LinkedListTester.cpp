@@ -13,6 +13,7 @@ void LinkedListTester :: testListBasics()
 {
     LinkedList<int> numbers;
     numbers.add(9);
+    
     cout << numbers.getFront()->getData() << " Is is at the front of the list and should be 9" << endl;
     cout << numbers.getEnd()->getData() << " Is at the end of the list and should be 9" << endl;
     
@@ -25,5 +26,17 @@ void LinkedListTester :: testListBasics()
     cout << numbers.getFront()->getData() << " Is is at the front of the list and should be 9" << endl;
     cout << numbers.getEnd()->getData() << " Is at the end of the list and should be 9" << endl;
     
+    cout <<"This loop should print 4 lines"<< endl;
+    for (int index = 0; index < numbers.getSize(); index++)
+    {
+        cout << numbers.getFromIndex(index) << endl;
+    }
+    
+    numbers.remove(0);
+    numbers.add(32567);
+    numbers.addAtIndex(0,2312);
+    
+    cout << numbers.getFront()->getData() << " Is is at the front of the list and should be 2312" << endl;
+    cout << numbers.getEnd()->getData() << " Is at the end of the list and shouldbe 32567" << endl;
     
 }

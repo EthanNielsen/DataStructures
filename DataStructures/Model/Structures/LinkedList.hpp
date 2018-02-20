@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ctech. All rights reserved.
 //
 #include "List.hpp"
-#include "../Nodes/linearNode.h"
+#include "../Nodes/LinearNode.h"
 
 using namespace std;
 
@@ -40,6 +40,7 @@ public:
     //bool contains(Type item);
 };
 
+template <class Type>
 LinkedList<Type> :: LinkedList()
 {
     this->front = nullptr;
@@ -47,6 +48,7 @@ LinkedList<Type> :: LinkedList()
     this->size = 0;
 }
 
+template <class Type>
 LinkedList<Type> :: ~LinkedList()
 {
     LinearNode<Type> * destroyStructure = front;
@@ -58,6 +60,7 @@ LinkedList<Type> :: ~LinkedList()
     }
 }
 
+template <class Type>
 void LinkedList<Type> :: add(Type item)
 {
     LinearNode<Type> * newData = new LinearNode<Type>(item);
@@ -76,6 +79,7 @@ void LinkedList<Type> :: add(Type item)
     this->size += 1;
 }
 
+template <class Type>
 void LinkedListt<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
@@ -107,6 +111,7 @@ void LinkedListt<Type> :: addAtIndex(int index, Type item)
     }
 }
 
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size);
@@ -150,16 +155,19 @@ Type LinkedList<Type> :: remove(int index)
     return removedData;
 }
 
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getEnd()
 {
     return this->end;
 }
 
+template <class Type>
 LinearNode<Type> * LinkedList<Type> :: getFront()
 {
     return this->front;
 }
 
+template <class Type>
 int LinkedList<Type> :: getSize() const
 {
     return this->size;
