@@ -20,7 +20,7 @@ class LinkedListTester
 public:
     void testListBasics();
     void testListWithData();
-}
+};
 
 
 

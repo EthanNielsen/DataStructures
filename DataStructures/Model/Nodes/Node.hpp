@@ -11,7 +11,8 @@
 
 #include <stdio.h>
 
-<class Type>
+template <class Type>
+class Node
 {
 protected:
     Type data;
@@ -42,7 +43,7 @@ void Node<Type> :: setData(Type data)
 }
 
 template <class Type>
-TypeNode<Type> :: getData()
+Type Node<Type> :: getData()
 {
     return data;
 }

@@ -10,13 +10,15 @@
 #define AbstractBaseClass_h
 
 #include <assert.h>
-#include "../../Nodes/LinearNode.hpp"
+#include "../Nodes/LinearNode.h"
 
-class listStructure()
+template <class Type>
+class List
 {
 protected:
     int size;
-
+    
+public:
     //Structure
     virtual void add(Type item) = 0;
     virtual void addAtIndex(int index, Type item) = 0;

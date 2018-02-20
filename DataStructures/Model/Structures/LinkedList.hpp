@@ -5,7 +5,7 @@
 //  Created by Nielsen, Ethan on 2/14/18.
 //  Copyright © 2018 Ctech. All rights reserved.
 //
-#include "List.hpp"
+#include "listStructure.h"
 #include "../Nodes/LinearNode.h"
 
 using namespace std;
@@ -19,7 +19,7 @@ class LinkedList : public List<Type>
 {
 protected:
     LinearNode<Type> * front;
-    LinearNode<Type> * front;
+    LinearNode<Type> * end;
     
 public:
     //Constructors
@@ -80,7 +80,7 @@ void LinkedList<Type> :: add(Type item)
 }
 
 template <class Type>
-void LinkedListt<Type> :: addAtIndex(int index, Type item)
+void LinkedList<Type> :: addAtIndex(int index, Type item)
 {
     assert(index >= 0 && index <= this->size);
     if(index == this->size)
@@ -112,13 +112,33 @@ void LinkedListt<Type> :: addAtIndex(int index, Type item)
 }
 
 template <class Type>
+Type LinkedList<Type> :: getFromIndex(int index)
+{
+    assert(index >= && index < this->size);
+    Type data;
+    
+    LinearNode<Type> * current = front;
+    
+    for (int position = 0; position < index; position++)
+    {
+        current = current->getNextNode();
+    }
+    
+    data = currrent->getData();
+    
+    return data;
+}
+
+
+
+template <class Type>
 Type LinkedList<Type> :: remove(int index)
 {
     assert(index >= 0 && index < this->size);
     
-    linearNode<Type> * current = front;
-    linearNode<Type> * toBeRemoved = nullptr;
-    linearNode<Type> * previous = nullptr;
+    LinearNode<Type> * current = front;
+    LinearNode<Type> * toBeRemoved = nullptr;
+    LinearNode<Type> * previous = nullptr;
     
     Type removedData;
     
@@ -129,7 +149,7 @@ Type LinkedList<Type> :: remove(int index)
     }
     else
     {
-        for (int posittion = 0; position < index; position++)
+        for (int position = 0; position < index; position++)
         {
             previous = current;
             current = current->getNextNode();
