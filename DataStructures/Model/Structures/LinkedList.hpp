@@ -114,7 +114,7 @@ void LinkedList<Type> :: addAtIndex(int index, Type item)
 template <class Type>
 Type LinkedList<Type> :: getFromIndex(int index)
 {
-    assert(index >= && index < this->size);
+    assert(index >= 0 && index < this->size);
     Type data;
     
     LinearNode<Type> * current = front;
@@ -124,7 +124,7 @@ Type LinkedList<Type> :: getFromIndex(int index)
         current = current->getNextNode();
     }
     
-    data = currrent->getData();
+    data = current->getData();
     
     return data;
 }
