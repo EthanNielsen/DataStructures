@@ -34,4 +34,25 @@ public:
     Type remove(int index);
 }
 
+template <class Type>
+Queue<Type> :: Queue() : LinkedList<Type>()
+{
+    
+}
+
+template <class Type>
+Queue<Type> :: ~Queue()
+{
+    for(linearNode<Type> * removed = this->front; removed != nullptr; removed = this->front)
+    {
+        this->front = removed->getNextNode();
+        delete removed;
+    }
+}
+
+
+
+
+
+
 #endif /* Queue_hpp */
