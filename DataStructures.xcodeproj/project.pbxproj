@@ -42,6 +42,10 @@
 		28196C072024EBF500086CE6 /* CrimeData.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CrimeData.hpp; sourceTree = "<group>"; };
 		28196C082024EBF500086CE6 /* CrimeData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CrimeData.cpp; sourceTree = "<group>"; };
 		28196C0F2024F64200086CE6 /* Array.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Array.hpp; sourceTree = "<group>"; };
+		28219B01203F49620023A087 /* Queue.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queue.hpp; sourceTree = "<group>"; };
+		28219B02203F49870023A087 /* Stack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stack.hpp; sourceTree = "<group>"; };
+		28219B03203F49A00023A087 /* CircularList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CircularList.hpp; sourceTree = "<group>"; };
+		28219B04203F49C30023A087 /* DoubleNode.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DoubleNode.hpp; sourceTree = "<group>"; };
 		284A5876202CDAA000E8A43F /* LinearNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinearNode.h; sourceTree = "<group>"; };
 		284A5877202CE25700E8A43F /* listStructure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = listStructure.h; sourceTree = "<group>"; };
 		28612342202A33B1003AD87B /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
@@ -142,8 +146,8 @@
 		28196C0D2024F5F400086CE6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				28612345202A40B8003AD87B /* Nodes */,
 				28196C12202502DD00086CE6 /* Structures */,
+				28612345202A40B8003AD87B /* Nodes */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,12 +155,23 @@
 		28196C12202502DD00086CE6 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
-				28196C0F2024F64200086CE6 /* Array.hpp */,
-				284A5877202CE25700E8A43F /* listStructure.h */,
+				28219B00203F491A0023A087 /* Linear */,
 				286926732034BBEC0096E432 /* LinkedList.cpp */,
-				286926742034BBEC0096E432 /* LinkedList.hpp */,
 			);
 			path = Structures;
+			sourceTree = "<group>";
+		};
+		28219B00203F491A0023A087 /* Linear */ = {
+			isa = PBXGroup;
+			children = (
+				28196C0F2024F64200086CE6 /* Array.hpp */,
+				286926742034BBEC0096E432 /* LinkedList.hpp */,
+				284A5877202CE25700E8A43F /* listStructure.h */,
+				28219B01203F49620023A087 /* Queue.hpp */,
+				28219B02203F49870023A087 /* Stack.hpp */,
+				28219B03203F49A00023A087 /* CircularList.hpp */,
+			);
+			path = Linear;
 			sourceTree = "<group>";
 		};
 		28612341202A338C003AD87B /* Testers */ = {
@@ -175,6 +190,7 @@
 			children = (
 				28612347202A40CD003AD87B /* Node.hpp */,
 				284A5876202CDAA000E8A43F /* LinearNode.h */,
+				28219B04203F49C30023A087 /* DoubleNode.hpp */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
