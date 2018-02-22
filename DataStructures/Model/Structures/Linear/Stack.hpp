@@ -30,4 +30,19 @@ public:
     Type remove(int index);
 }
 
+template <class Type>
+Stack<Type> :: Stack() : LinkedList<Type>()
+{
+    
+}
+
+template <class Type>
+Stack<Type> :: ~Stack()
+{
+    while(this->size > 0)
+    {
+        pop();
+    }
+}
+
 #endif /* Stack_hpp */
