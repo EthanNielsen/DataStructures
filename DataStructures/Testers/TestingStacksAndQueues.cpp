@@ -39,6 +39,10 @@ class stackVersusList
     listTimer.startTimer();
     value = numbersList.geFromindex(7);
     listTimer.stopTimer();
+    
+    
+    cout << "The time it took to work with Stack" << endl;
+    stackTimer.displayInformation()
 }
 
 template <class Type>
