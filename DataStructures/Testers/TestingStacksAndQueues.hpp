@@ -18,6 +18,14 @@
 
 using namespace std;
 
+template <class Type>
+class TestingStacksAndQueues
+{
+public:
+    stackVersusList;
+    stackVersusQueue;
+    queueVersusList;
+};
 
 
 #endif /* TestingStacksAndQueues_hpp */

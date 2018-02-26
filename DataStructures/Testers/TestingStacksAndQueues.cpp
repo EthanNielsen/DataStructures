@@ -7,3 +7,21 @@
 //
 
 #include "TestingStacksAndQueues.hpp"
+
+template <class Type>
+class stackVersusList
+{
+    
+}
+
+template <class Type>
+class stackVersusQueue
+{
+    
+}
+
+template <class Type>
+class stackVersusQueue
+{
+    
+}
