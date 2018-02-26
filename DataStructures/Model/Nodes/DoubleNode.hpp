@@ -30,6 +30,18 @@ public:
     void setNext(DoubleNode<Type> * next);
 };
 
+template <class Type>
+DoubleNode<Type> :: DoubleNode() : Node<Type>()
+{
+    previous = nullptr;
+    next = nullptr;
+}
 
+template <class Type>
+DoubleNode<Type> :: DoubleNode(Type data) : Node<Type>(data)
+{
+    previous = nullptr;
+    next = nullptr;
+}
 
 #endif /* DoubleNode_hpp */
