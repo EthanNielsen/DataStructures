@@ -102,7 +102,7 @@ template <class Type>
 Type Stack<Type> :: peek()
 {
     assert(this->size > 0);
-    returrn this->getFront()->getData();
+    return this->getFront()->getData();
 }
 
 template <class Type>
