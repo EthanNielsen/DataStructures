@@ -32,4 +32,16 @@ public:
     int getSize() const;
 };
 
+template <class Type>
+CircularList<Type> :: CircularList()
+{
+    front->setPrevious(end);
+    front->setNext(end);
+    
+    end->setPrevious(front);
+    end->setNext(front);
+}
+
+
+
 #endif /* CircularList_hpp */
