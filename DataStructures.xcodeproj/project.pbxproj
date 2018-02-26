@@ -15,6 +15,7 @@
 		28612344202A33B1003AD87B /* ArrayTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28612342202A33B1003AD87B /* ArrayTester.cpp */; };
 		286926752034BBEC0096E432 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 286926732034BBEC0096E432 /* LinkedList.cpp */; };
 		286926782034C6790096E432 /* LinkedListTester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 286926762034C6790096E432 /* LinkedListTester.cpp */; };
+		2891C63E204493160026B302 /* TestingStacksAndQueues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2891C63C204493160026B302 /* TestingStacksAndQueues.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,8 @@
 		286926742034BBEC0096E432 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		286926762034C6790096E432 /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
 		286926772034C6790096E432 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
+		2891C63C204493160026B302 /* TestingStacksAndQueues.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestingStacksAndQueues.cpp; sourceTree = "<group>"; };
+		2891C63D204493160026B302 /* TestingStacksAndQueues.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestingStacksAndQueues.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +184,8 @@
 				28612343202A33B1003AD87B /* ArrayTester.hpp */,
 				286926762034C6790096E432 /* LinkedListTester.cpp */,
 				286926772034C6790096E432 /* LinkedListTester.hpp */,
+				2891C63C204493160026B302 /* TestingStacksAndQueues.cpp */,
+				2891C63D204493160026B302 /* TestingStacksAndQueues.hpp */,
 			);
 			path = Testers;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				28196C092024EBF500086CE6 /* CrimeData.cpp in Sources */,
 				28196BFF2024EAE900086CE6 /* FileController.cpp in Sources */,
 				28196C052024EB2500086CE6 /* Timer.cpp in Sources */,
+				2891C63E204493160026B302 /* TestingStacksAndQueues.cpp in Sources */,
 				28612344202A33B1003AD87B /* ArrayTester.cpp in Sources */,
 				28196C022024EAF600086CE6 /* Controller.cpp in Sources */,
 				286926752034BBEC0096E432 /* LinkedList.cpp in Sources */,
