@@ -42,6 +42,16 @@ CircularList<Type> :: CircularList()
     end->setNext(front);
 }
 
-
+template <class Type>
+CircularList<Type> :: ~CircularList()
+{
+    DoubleNode<Type> * current = front;
+    while (this->front != nullptr)
+    {
+        front = front->getNext();
+        delete current;
+        current = front;
+    }
+}
 
 #endif /* CircularList_hpp */
