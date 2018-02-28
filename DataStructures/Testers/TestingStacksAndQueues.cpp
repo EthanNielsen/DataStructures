@@ -66,7 +66,7 @@ void stackVersusList()
     }
 }
 
-void TestStacksAndQueues :: stackVersusQueue()
+void TestingStacksAndQueues :: stackVersusQueue()
 {
     vector<CrimeData> data = FileController :: readCrimeDataToVectorr("path to file");
     
@@ -107,10 +107,42 @@ void TestStacksAndQueues :: stackVersusQueue()
     
     for (int index = 0; index < 10; index++)
     {
+        stackFromQueue.push(queue.dequeue());
+        queueFromStack.enqueue(stack.pop());
+    }
+    
+    for (int index = 0; index < 10; index++)
+    {
+        cout << index << endl;
+        cout << "Stack result: " << stackFromQueue.pop() << endl;
+        cout << "Queue result: " << queueFromStack.dequeue() << endl;
+    }
         
 };
 
-void stackVersusQueue
+void stackVersusQueue()
 {
+    Queue<string> wordQueue;
+    LinkedList<string> wordList;
     
+    wordQueue.add("first");
+    wordQueue.add("second");
+    wordQueue.add("third");
+    wordQueue.add("fourth");
+    wordQueue.add("fifth");
+    
+    wordQueue.add("first");
+    wordQueue.add("second");
+    wordQueue.add("third");
+    wordQueue.add("fourth");
+    wordQueue.add("fifth");
+    
+    cout << "Queue: " << wordQueue.getFromIndex(0) << " versus List: " << wordList.getFromIndex(0) << endl;
+    cout << "Here is the in order removal in a queue:" << endl;
+    wordQueue.clear();
+    cout << "Here is a backwards order in a list:" << endl;
+    for(int index = wordList.getSize() - 1; index >= 0; index--)
+    {
+        cout << wordList.remove(index) << endl;
+    }
 };
