@@ -8,7 +8,7 @@
 
 #include "TestingStacksAndQueues.hpp"
 
-void stackVersusList()
+void TestingStacksAndQueues :: stackVersusList()
 {
     Stack<int> numberStack;
     LinkedList<int> numberList;
@@ -68,9 +68,9 @@ void stackVersusList()
 
 void TestingStacksAndQueues :: stackVersusQueue()
 {
-    vector<CrimeData> data = FileController :: readCrimeDataToVectorr("path to file");
+    vector<CrimeData> data = FileController :: readCrimeDataToVector("path to file");
     
-    Stack<CrimeData> crimeStacck;
+    Stack<CrimeData> crimeStack;
     Queue<CrimeData> crimeQueue;
     
     for (int index = 0; index < 100; index++)
@@ -82,7 +82,6 @@ void TestingStacksAndQueues :: stackVersusQueue()
     
     Queue<int> queue;
     Stack<int> stack;
-    Queue<int> stack;
     Queue<int> queueFromStack;
     Stack<int> stackFromQueue;
     
@@ -101,7 +100,7 @@ void TestingStacksAndQueues :: stackVersusQueue()
     
     for (int index = 0; index < 10; index++)
     {
-        queue.enqueue(index):
+        queue.enqueue(index);
         stack.push(index);
     }
     

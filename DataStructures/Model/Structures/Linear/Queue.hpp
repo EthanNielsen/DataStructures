@@ -43,7 +43,7 @@ Queue<Type> :: Queue() : LinkedList<Type>()
 template <class Type>
 Queue<Type> :: ~Queue()
 {
-    for(linearNode<Type> * removed = this->front; removed != nullptr; removed = this->front)
+    for(LinearNode<Type> * removed = this->front; removed != nullptr; removed = this->front)
     {
         this->front = removed->getNextNode();
         delete removed;
@@ -99,7 +99,7 @@ Type Queue<Type> :: dequeue()
 }
 
 template <class Type>
-Type Queue<Type> :: removed(int index)
+Type Queue<Type> :: remove(int index)
 {
     assert(index == 0);
     return dequeue();
@@ -122,7 +122,7 @@ Type Queue<Type> :: peek()
 }
 
 template <class Type>
-Type Queue<Type> :: getFrontIndex(int index)
+Type Queue<Type> :: getFromIndex(int index)
 {
     assert(index == 0);
     return peek();

@@ -80,7 +80,7 @@ template <class Type>
 Type Stack<Type> :: pop()
 {
     assert (this->size > 0);
-    Type remved = this->front->getData();
+    Type removed = this->front->getData();
     
     LinearNode<Type> * removedNode = this->getFront();
     this->front = removedNode->getNextNode();

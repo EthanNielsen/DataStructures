@@ -6,7 +6,7 @@
 //  Copyright © 2018 Ctech. All rights reserved.
 //
 #include "listStructure.h"
-#include "../Nodes/LinearNode.h"
+#include "../../Nodes/LinearNode.hpp"
 
 using namespace std;
 

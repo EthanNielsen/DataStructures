@@ -18,7 +18,6 @@
 
 using namespace std;
 
-template <class Type>
 class TestingStacksAndQueues
 {
 public:

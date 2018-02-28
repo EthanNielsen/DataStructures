@@ -1,13 +1,13 @@
 //
-//  LinearNode.h
+//  LinearNode.hpp
 //  DataStructures
 //
 //  Created by Nielsen, Ethan on 2/8/18.
 //  Copyright © 2018 Ctech. All rights reserved.
 //
 
-#ifndef LinearNode_h
-#define LinearNode_h
+#ifndef LinearNode_hpp
+#define LinearNode_hpp
 #include "Node.hpp"
 
 template <class Type>
@@ -69,4 +69,4 @@ LinearNode<Type> * LinearNode<Type> :: getNextNode()
     return next;
 }
 
-#endif /* LinearNode_h */
+#endif /* LinearNode_hpp */

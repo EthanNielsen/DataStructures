@@ -10,7 +10,7 @@
 #define AbstractBaseClass_h
 
 #include <assert.h>
-#include "../Nodes/LinearNode.h"
+#include "../../Nodes/LinearNode.hpp"
 
 template <class Type>
 class List
