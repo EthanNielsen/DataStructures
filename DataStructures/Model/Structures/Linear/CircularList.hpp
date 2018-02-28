@@ -172,8 +172,18 @@ int CircularList<Type> :: getSize() const
     return this->size;
 }
 
+//Extraneous Bad Design
+template <class Type>
+LinearNode<Type> * CircularList<Type> :: getFront()
+{
+    return nullptr;
+}
 
-
+template <class Type>
+LinearNode<Type> * CircularList<Type> :: getEnd()
+{
+    return nullptr;
+}
 
 
 #endif /* CircularList_hpp */
