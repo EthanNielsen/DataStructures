@@ -22,9 +22,9 @@ template <class Type>
 class TestingStacksAndQueues
 {
 public:
-    stackVersusList;
-    stackVersusQueue;
-    queueVersusList;
+    void stackVersusList();
+    void stackVersusQueue();
+    void queueVersusList();
 };
 
 

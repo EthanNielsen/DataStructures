@@ -8,8 +8,7 @@
 
 #include "TestingStacksAndQueues.hpp"
 
-template <class Type>
-class stackVersusList
+void stackVersusList()
 {
     Stack<int> numberStack;
     LinkedList<int> numberList;
@@ -25,7 +24,7 @@ class stackVersusList
     
     int index = 0;
     int value = -99;
-    stackTimer.startTime();
+    stackTimer.startTimer();
     
     while (index < 7)
     {
@@ -37,22 +36,42 @@ class stackVersusList
     stackTimer.stopTimer();
     index = 0;
     listTimer.startTimer();
-    value = numbersList.geFromindex(7);
+    value = numberList.getFromindex(7);
     listTimer.stopTimer();
     
     
     cout << "The time it took to work with Stack" << endl;
-    stackTimer.displayInformation()
+    stackTimer.displayInformation();
+    cout << "The time it took to work with list" << endl;
+    listTimer.displayInformation();
+    
+    cout << "What is left in the Stack" << endl;
+    
+    //Here is how to cast as a parent type to get access tto a method that is not defined in the subclass.
+    LinkedList<int> * listVersion = &numberStack;
+    int stackSize = listVersion->getSize();
+    cout << "Stack size is: " << stackSize << endl;
+    for (int index = 0; index < stackSize; index++)
+    {
+        cout << numberStack.pop() << endl;
+    }
+    
+    cout << "What is left in the list" << endl;
+    //Here is how to cast as a parent type to get access to a method that is not defined in the subclass.
+    int listSize = numberList.getSize();
+    cout << "List size is: " << listSize << endl;
+    for (int index = 0; index < listSize; index++)
+    {
+        cout << numberList.getFromIndex(index) << "\t";
+    }
 }
 
-template <class Type>
-class stackVersusQueue
+void stackVersusQueue
 {
     
 };
 
-template <class Type>
-class stackVersusQueue
+void stackVersusQueue
 {
     
 };
