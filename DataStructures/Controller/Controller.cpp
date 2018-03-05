@@ -16,6 +16,7 @@ void Controller :: start()
     RecursionTester test;
     test.testRecursionNumbers();
     test.testRecursionString();
+    test.testRecursionLoL();
     
 //    ArrayTester myTest;
 //    findMaxAndMin();

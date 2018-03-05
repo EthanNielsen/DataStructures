@@ -20,9 +20,11 @@ class RecursionTester
 private:
     int fib(int start);
     string mystery(string word);
+    string myMystery(string lol);
 public:
     void testRecursionNumbers();
     void testRecursionString();
+    void testRecursionLoL();
 };
 
 #endif /* RecursionTester_hpp */

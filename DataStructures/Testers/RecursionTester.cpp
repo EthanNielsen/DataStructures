@@ -53,3 +53,23 @@ void RecursionTester :: testRecursionString()
     cout << mystery("car") << endl;
     cout << mystery("apple") << endl;
 }
+
+string RecursionTester :: myMystery(string lol)
+{
+    if ( lol.length() == 1)
+    {
+        return lol;
+    }
+    else
+    {
+        return lol + myMystery(lol.substr(0, lol.length() - 1));
+    }
+}
+
+void RecursionTester :: testRecursionLoL()
+{
+    cout << myMystery("L") << endl;
+    cout << myMystery("bublebabbyboy") << endl;
+    cout << myMystery("r i ch ard ander sonsthir stymilkboy") << endl;
+    
+}
