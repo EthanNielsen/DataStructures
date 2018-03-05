@@ -18,8 +18,10 @@ int RecursionTester :: fib(int number)
     }
     else
     {
-        cout << "Reached a recursive case with: " << number - 1 << " and " << number - 2 << endl;
+//        cout << "Reached a recursive case with: " << number - 1 << " and " << number - 2 << endl;
         return fib (number - 1) + fib (number - 2);
+        
+//        return fib (number - 1) * number;
     }
 }
 
