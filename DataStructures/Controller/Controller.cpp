@@ -13,10 +13,14 @@ using namespace std;
 // The code below sorts through all the Crime Data and finds the larges and smallest part of it.
 void Controller :: start()
 {
-    ArrayTester myTest;
-    findMaxAndMin();
+    RecursionTester test;
+    test.testRecursionNumbers();
+    test.testRecursionString();
     
-    testArray();
+//    ArrayTester myTest;
+//    findMaxAndMin();
+//    
+//    testArray();
 }
 
 void Controller :: findMaxAndMin()
