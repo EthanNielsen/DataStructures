@@ -13,10 +13,12 @@ int RecursionTester :: fib(int number)
     //This is the Fibonacci sequence
     if ( number == 0 || number == 1 )
     {
+        cout << "Reached a base case" << endl;
         return 1;
     }
     else
     {
+        cout << "Reached a recursive case with: " << number - 1 << " and " << number - 2 << endl;
         return fib (number - 1) + fib (number - 2);
     }
 }
