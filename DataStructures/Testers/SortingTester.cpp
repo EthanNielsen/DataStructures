@@ -34,3 +34,31 @@ int SortingTester :: partition(vector<CrimeData> & info, int low, int high)
     swap(info, smallest + 1, high);
     return smallest + 1;
 }
+
+void SortingTester :: swap(vector<CrimeData> & info, int small, int large)
+{
+    CrimeData temp = info[small];
+    info[small] = info[large];
+    info[large] = temp;
+    swapCount++;
+}
+
+void SortingTester :: testSorts()
+{
+    Timer sortTimer;
+    swapCount = 0;
+    vector<CrimeData> data = FileController::readCrimeDataToVector(/Users/enie1762/Documents/CS20420/DataStructures/DataStructures/Data/crime.csv);
+    
+    vector<CrimeData> smaller;
+    for (int index = 0; index < 10000; index++)
+    {
+        smaller.push_back(data[index]);
+    }
+    
+    sortTimer.startTimer();
+    quickSort(smaller, 0, smaller.size());
+    sortTimer.stopTimer();
+    sortTimer.displayInformation();
+    cout << "The number of swaps were: " << swapCount << endl;
+}
+
