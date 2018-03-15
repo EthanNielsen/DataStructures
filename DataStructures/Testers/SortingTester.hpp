@@ -17,11 +17,11 @@ class SortingTester
 {
 private:
     int swapCount;
-    void quicksort(vector<CrimeData> & data, int low, int high);
+    void quickSort(vector<CrimeData> & data, int low, int high);
     int partition(vector<CrimeData>& data, int low, int high);
     void swap(vector<CrimeData> & info, int small, int large);
 public:
     void testSorts();
-}
+};
 
 #endif /* SortingTester_hpp */

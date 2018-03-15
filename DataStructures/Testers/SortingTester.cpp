@@ -13,8 +13,8 @@ void SortingTester :: quickSort(vector<CrimeData> & data, int low, int high)
     {
         int partitionPoint = partition(data, low, high);
         
-        quicksort(data, low, partitionPoint - 1);
-        quicksort(data, partitionPoint + 1, high);
+        quickSort(data, low, partitionPoint - 1);
+        quickSort(data, partitionPoint + 1, high);
     }
 }
 
