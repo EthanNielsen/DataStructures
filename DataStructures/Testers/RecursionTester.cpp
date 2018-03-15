@@ -27,7 +27,7 @@ int RecursionTester :: fib(int number)
 
 string RecursionTester :: mystery(string word)
 {
-    if ( word.length() == 1)
+    if (word.length() == 1)
     {
         return word;
     }
