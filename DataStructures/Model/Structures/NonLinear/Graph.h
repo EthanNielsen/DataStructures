@@ -54,4 +54,31 @@ public:
     int costTraversal(Graph<Type> & graph, int vertex);
 }
 
+template <class Type>
+const int Graph<Type> :: MAXIMUM;
+
+template <class Type>
+Graph<Type> :: Graph()
+{
+    this->vertexCount = 0;
+}
+
+template <class Type>
+Type& Graph<Type> :: operator[](int vertex)
+{
+    assert(vertex < vertexCount);
+    return graphData[Vertex];
+}
+
+//Right hand side operator
+template <class Type>
+Type Graph<Type> :: operator[](int vertex) const
+{
+    assert(vertex < vertexCount);
+    return graphData[vertex];
+}
+
+//Apersand is the reference operator / Memory address.
+//Left hand side uses the reference while the Right side is a copy of what is stored there.
+
 #endif /* Graph_h */
