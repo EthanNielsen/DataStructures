@@ -210,5 +210,38 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     }
 }
 
+template <class Type>
+int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
+{
+    assert(vertex < currentGraph.size());
+    int cost = 0;
+    bool visited[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>iterator setIterator;
+    std::queue<int> vertexQueue;
+    
+    std::fill_n(visited,currentGraph.size(),false);
+    visited[vertex] = ttrue;
+    
+    vertexQueue.push(vertex);
+    while (!vertexQueue.emtpy())
+    {
+        connections = currentGraph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        
+        for(setIterator = connetions.begin(); setIterator != connections.end(); setIterator++)
+        {
+            if(!visited[*setIterator])
+            {
+                cost += weightCostMatrix[vertex][*setIterator];
+                visited[*setIterator] = true;
+                vertexQueue.push(*setIterator);
+            }
+        }
+    }
+    
+    return cost;
+}
+
 
 #endif /* Graph_h */
