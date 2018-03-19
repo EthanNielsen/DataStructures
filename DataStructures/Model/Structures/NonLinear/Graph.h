@@ -221,7 +221,7 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
     std::queue<int> vertexQueue;
     
     std::fill_n(visited,currentGraph.size(),false);
-    visited[vertex] = ttrue;
+    visited[vertex] = true;
     
     vertexQueue.push(vertex);
     while (!vertexQueue.emtpy())
@@ -241,6 +241,36 @@ int Graph<Type> :: costTraversal(Graph<Type> & currentGraph, int vertex)
     }
     
     return cost;
+}
+
+template <class Type>
+int Graph<Type> :: breadthFirstTraversal(Graph<Type> & currentGraph, int vertex)
+{
+    assert(vertex < currentGraph.size());
+    int cost = 0;
+    bool visited[MAXIMUM];
+    std::set<int> connections;
+    std::set<int>iterator setIterator;
+    std::queue<int> vertexQueue;
+    
+    std::fill_n(visited,currentGraph.size(),false);
+    visited[vertex] = true;
+    vertexQueue.push(vertex);
+    while (!vertexQueue.emtpy())
+    {
+        connections = currentGraph.neighbors(vertexQueue.front());
+        vertexQueue.pop();
+        
+        for(setIterator = connetions.begin(); setIterator != connections.end(); setIterator++)
+        {
+            if(!visited[*setIterator])
+            {
+                visited[*setIterator] = true;
+                cout << currentGraph[*setIterator] << endl;
+                vertexQueue.push(*setIterator);
+            }
+        }
+    }
 }
 
 
