@@ -55,6 +55,7 @@
 		28612342202A33B1003AD87B /* ArrayTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayTester.cpp; sourceTree = "<group>"; };
 		28612343202A33B1003AD87B /* ArrayTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayTester.hpp; sourceTree = "<group>"; };
 		28612347202A40CD003AD87B /* Node.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		2861B1752060364000478C6C /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		286926742034BBEC0096E432 /* LinkedList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedList.hpp; sourceTree = "<group>"; };
 		286926762034C6790096E432 /* LinkedListTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkedListTester.cpp; sourceTree = "<group>"; };
 		286926772034C6790096E432 /* LinkedListTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkedListTester.hpp; sourceTree = "<group>"; };
@@ -162,6 +163,7 @@
 		28196C12202502DD00086CE6 /* Structures */ = {
 			isa = PBXGroup;
 			children = (
+				2861B1742060363100478C6C /* NonLinear */,
 				28219B00203F491A0023A087 /* Linear */,
 			);
 			path = Structures;
@@ -205,6 +207,14 @@
 				28219B04203F49C30023A087 /* DoubleNode.hpp */,
 			);
 			path = Nodes;
+			sourceTree = "<group>";
+		};
+		2861B1742060363100478C6C /* NonLinear */ = {
+			isa = PBXGroup;
+			children = (
+				2861B1752060364000478C6C /* Graph.h */,
+			);
+			path = NonLinear;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
