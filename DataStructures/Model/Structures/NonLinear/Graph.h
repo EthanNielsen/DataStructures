@@ -63,6 +63,7 @@ Graph<Type> :: Graph()
     this->vertexCount = 0;
 }
 
+//Left hand side operator
 template <class Type>
 Type& Graph<Type> :: operator[](int vertex)
 {
@@ -80,5 +81,107 @@ Type Graph<Type> :: operator[](int vertex) const
 
 //Apersand is the reference operator / Memory address.
 //Left hand side uses the reference while the Right side is a copy of what is stored there.
+
+
+template <class Type>
+void Graph<Type> :: addVertex(const Type& value)
+{
+    assert(vertexCount < MAXIMUM);
+    int newVertexNumber = vertexCount;
+    vertexCount++;
+    
+    for(int otherVertexNumber = 0; otherVertexNumber < vertexCount; otherVertexNumber++)
+    {
+        adjacencyMatrix[otherVertexNumber][newVertexNumber] = false;
+        adjacencyMatrix[newVertexNumber][otherVertexNumber] = false;
+    }
+    
+    graphData[newVertexNumber] = value;
+}
+
+
+template <class Type>
+void Graph<Type> :: removedEdge(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = false;
+}
+
+template <class Type>
+void Graph<Type> :: removeEdgeUndirected
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = false;
+    adjacencyMatrix[target][source] = false;
+}
+
+template <class Type>
+void Graph<Type> : remoedEdgeCost(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    weightCostMatrix[source][target] = 0;
+    weightCostMatrix[target][source] = 0;
+}
+
+template <class Type>
+void Graph<Type> : addEdge(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = true;
+}
+
+template <class Type>
+void Graph<Type> : addEdgeCost(int source, int target, int cost)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    weightCostMatrix[source][target] = cost;
+    weightCostMatrix[target][source] = cost;
+}
+
+template <class Type>
+void Graph<Type> : addEdgeUndirected(int source, int target)
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    adjacencyMatrix[source][target] = true;
+    adjacencyMatrix[target][source] = true;
+}
+
+template <class Type>
+bool Game<Type> :: hadUndirectedConnection(int source, int target) const
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+
+    bool isAnEdge = false;
+    isAnEdge = adjacencyMatrix[source][target] || adjacencyMatrix[target][source];
+    
+    return isAnEdge;
+}
+
+template <class Type>
+bool Game<Type> :: areConnected(int source, int target) const
+{
+    assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
+    
+    bool isAnEdge = false;
+    isAnEdge = adjacencyMatrix[source][target]
+    
+    return isAnEdge;
+}
+
+template <class Type>
+std::set<int> Graph<Type> :: neighbors(int vertex) const
+{
+    assert(vertex < vertexCount);
+    std::set<int> vertexNeighbors;
+    
+    for(int index = 0; index < vertexCount; index++)
+    {
+        if(adjacencyMatrix[vertex][index])
+        {
+            vertexNeighbors.insert(index);
+        }
+    }
+    return vertexNeighbors;
+}
 
 #endif /* Graph_h */
