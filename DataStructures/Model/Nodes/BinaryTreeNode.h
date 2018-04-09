@@ -9,6 +9,8 @@
 #ifndef BinaryTreeNode_h
 #define BinaryTreeNode_h
 
+#include "Node.hpp"
+
 template <class Type>
 class BinaryTreeNode : public Node<Type>
 {
@@ -25,9 +27,9 @@ public:
     void setRightNode(BinaryTreeNode<Type> * right);
     void setLeftNode(BinaryTreeNode<Type> * left);
     
+    BinaryTreeNode<Type> * getRootNode();
     BinaryTreeNode<Type> * getRightNode();
-    BinaryTreeNode<Type> * getRightNode();
-    BinaryTreeNode<Type> * getRightNode();
+    BinaryTreeNode<Type> * getLeftNode();
 
 };
 
