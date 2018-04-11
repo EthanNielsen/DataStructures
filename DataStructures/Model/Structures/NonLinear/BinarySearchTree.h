@@ -11,7 +11,7 @@
 
 #include "Tree.hpp"
 #include <iostream>
-#include <algorithm>
+
 using namespace std;
 
 template <class Type>
@@ -60,4 +60,60 @@ public:
     Type findMaximum();
 };
 
+//Informational Method
+template <class Type>
+int BinarySearchTree<Type> :: getHeight()
+{
+    return -1;
+}
+
+template <class Type>
+int BinarySearchTree<Type> :: getSize()
+{
+    return -1;
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isComplete()
+{
+    
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isBalanced()
+{
+    return false;
+}
+
+//Traversal
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal()
+{
+    
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal()
+{
+    
+}
+
+//Data Operation
+template <class Type>
+void BinarySearchTree<Type> :: insert(Type item)
+{
+    
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: contains(Type value)
+{
+    return false;
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: remove(Type item)
+{
+    
+}
 #endif /* BinarySearchTree_h */
