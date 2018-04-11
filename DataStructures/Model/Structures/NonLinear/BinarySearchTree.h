@@ -25,11 +25,9 @@ protected:
     bool isCompleted(BinaryTreeNode<Type> startNode, int index, int size);
     
     void inOrderTraversal(BinaryTreeNode<Type> * inStart);
-    void inOrderTraversal(BinaryTreeNode<Type> * currentNode);
     void preOrderTraversal(BinaryTreeNode<Type> * preStart);
-    void preOrderTraversal(BinaryTreeNode<Type> * currentNode);
     void postOrderTraversal(BinaryTreeNode<Type> * postStart);
-    void postOrderTraversal(BinaryTreeNode<Type> * currentNode)
+
     
     void destroyTree(BinaryTreeNode<Type> * node);
     
