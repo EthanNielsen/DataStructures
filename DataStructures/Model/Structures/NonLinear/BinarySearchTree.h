@@ -65,13 +65,37 @@ public:
 template <class Type>
 int BinarySearchTree<Type> :: getHeight()
 {
-    return -1;
+    return calculatedHeight(this->root);
+}
+
+template <class Type>
+int BinarySearchTree<Type> :: calculatedHeight(BinaryTreeNode<Type> * current)
+{
+    if (current != nullptr)
+    {
+        return max(calculatedHeight(current->getLeftNode()), calculatedHeight(current->getRightNode())) + 1;
+    }
+    return 0;
 }
 
 template <class Type>
 int BinarySearchTree<Type> :: getSize()
 {
-    return -1;
+    int size = 0;
+    
+    size += calculatedSize(this->root);
+    
+    return size;
+}
+
+template <class Type>
+int BinarySearchTree<Type> :: calculatedSize(BinaryTreeNode<Type> * current)
+{
+    if(current != nullptr)
+    {
+        return calculatedSize(current->getLeftNode()) + calculatedSize(current->getRightNode()) + 1;
+    }
+    return 0;
 }
 
 template <class Type>
