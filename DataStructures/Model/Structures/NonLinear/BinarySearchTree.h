@@ -9,7 +9,7 @@
 #ifndef BinarySearchTree_h
 #define BinarySearchTree_h
 
-#include "Tree.hpp"
+#include "Tree.h"
 #include <iostream>
 
 using namespace std;
@@ -22,9 +22,10 @@ protected:
     int calculatedSize(BinaryTreeNode<Type> * startNode);
     int calculatedHeight(BinaryTreeNode<Type> * startNode);
     bool isBalanced(BinaryTreeNode<Type> * startNode);
-    bool isCompleted(BeinaryTreeNode<Type> startNode, int index, int size);
+    bool isCompleted(BinaryTreeNode<Type> startNode, int index, int size);
     
     void inOrderTraversal(BinaryTreeNode<Type> * inStart);
+    void inOrderTraversal(BinaryTreeNode<Type> * currentNode);
     void preOrderTraversal(BinaryTreeNode<Type> * preStart);
     void postOrderTraversal(BinaryTreeNode<Type> * postStart);
     
@@ -87,9 +88,21 @@ bool BinarySearchTree<Type> :: isBalanced()
 
 //Traversal
 template <class Type>
-void BinarySearchTree<Type> :: inOrderTraversal()
+void BinarySearchTree<Type> :: inOrderTraversal() //Public Implementation
 {
-    
+    inOrderTraversal(this->root);
+}
+
+// Protected Implementation
+template <class Type>
+void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        inOrderTraversal(currentNode->getLeftNode());
+        cout << currentNode->getData() << endl;
+        inOrderTraversal(currentNode->getRightNode());
+    }
 }
 
 template <class Type>
@@ -102,7 +115,7 @@ void BinarySearchTree<Type> :: preOrderTraversal()
 template <class Type>
 void BinarySearchTree<Type> :: insert(Type itemToInsert)
 {
-    BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(itemToInsert)
+    BinaryTreeNode<Type> * insertMe = new BinaryTreeNode<Type>(itemToInsert);
     BinaryTreeNode<Type> * previous = nullptr;
     BinaryTreeNode<Type> * current = this->root;
     
