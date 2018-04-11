@@ -27,7 +27,9 @@ protected:
     void inOrderTraversal(BinaryTreeNode<Type> * inStart);
     void inOrderTraversal(BinaryTreeNode<Type> * currentNode);
     void preOrderTraversal(BinaryTreeNode<Type> * preStart);
+    void preOrderTraversal(BinaryTreeNode<Type> * currentNode);
     void postOrderTraversal(BinaryTreeNode<Type> * postStart);
+    void postOrderTraversal(BinaryTreeNode<Type> * currentNode)
     
     void destroyTree(BinaryTreeNode<Type> * node);
     
@@ -108,7 +110,35 @@ void BinarySearchTree<Type> :: inOrderTraversal(BinaryTreeNode<Type> * currentNo
 template <class Type>
 void BinarySearchTree<Type> :: preOrderTraversal()
 {
-    
+    preOrderTraversal(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: preOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        cout << currentNode->getData() << endl;
+        preOrderTraversal(currentNode->getLeftNode());
+        preOrderTraversal(currentNode->getRightNode());
+    }
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal()
+{
+    postOrderTraversal(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: postOrderTraversal(BinaryTreeNode<Type> * currentNode)
+{
+    if(currentNode != nullptr)
+    {
+        postOrderTraversal(currentNode->getLeftNode());
+        postOrderTraversal(currentNode->getRightNode());
+        cout << currentNode->getData() << endl;
+    }
 }
 
 //Data Operation
