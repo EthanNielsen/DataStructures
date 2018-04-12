@@ -12,7 +12,7 @@
 #include "../../Nodes/BinaryTreeNode.h"
 
 template <class Type>
-class Type
+class Tree
 {
 protected:
     BinaryTreeNode<Type> * root;

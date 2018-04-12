@@ -21,8 +21,8 @@ protected:
     //MARK: Protected Methods
     int calculatedSize(BinaryTreeNode<Type> * startNode);
     int calculatedHeight(BinaryTreeNode<Type> * startNode);
-    bool isBalanced(BinaryTreeNode<Type> * startNode);
-    bool isCompleted(BinaryTreeNode<Type> startNode, int index, int size);
+    bool isBalance(BinaryTreeNode<Type> * startNode);
+    bool isComplete(BinaryTreeNode<Type> * startNode, int index, int size);
     
     void inOrderTraversal(BinaryTreeNode<Type> * inStart);
     void preOrderTraversal(BinaryTreeNode<Type> * preStart);
@@ -101,7 +101,26 @@ int BinarySearchTree<Type> :: calculatedSize(BinaryTreeNode<Type> * current)
 template <class Type>
 bool BinarySearchTree<Type> :: isComplete()
 {
+    int index = 0;
+    int size =  getSize();
     
+    return isComplete(this->root, index, size);
+}
+
+template <class Type>
+bool BinarySearchTree<Type> :: isComplete(BinaryTreeNode<Type> * startNode, int index, int size)
+{
+    if(startNode == nullptr)
+    {
+        return true;
+    }
+    
+    if(index >= size)
+    {
+        return false;
+    }
+    
+    return (isComplete(startNode->getLeftNode(), 2 * index + 1, size) && isComplete(startNode->getRightNode(), 2 * index + 2, size));
 }
 
 template <class Type>
@@ -111,7 +130,7 @@ bool BinarySearchTree<Type> :: isBalanced()
 }
 
 template <class Type>
-bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
+bool BinarySearchTree<Type> :: isBalance(BinaryTreeNode<Type> * current)
 {
     int leftHeight = 0;
     int rightHeight = 0;
@@ -125,8 +144,8 @@ bool BinarySearchTree<Type> :: isBalanced(BinaryTreeNode<Type> * current)
     rightHeight = calculatedHeight(current->getRightNode());
     
     int heightDifference = abs(leftHeight - rightHeight);
-    bool leftBalanced = isBalanced(current->getLeftNode());
-    bool rightBalanced = isBalanced(current->getRightNode());
+    bool leftBalanced = isBalance(current->getLeftNode());
+    bool rightBalanced = isBalance(current->getRightNode());
     
     if (heightDifference <= 1 && leftBalanced && rightBalanced)
     {

@@ -9,6 +9,7 @@
 #ifndef Graph_h
 #define Graph_h
 
+#include <set>
 #include <queue>
 #include <assert.h>
 
@@ -52,7 +53,7 @@ public:
     void depthFirstTraversal(Graph<Type> & graph, int vertex);
     void breadthFirstTraversal(Graph<Type> & graph, int vertex);
     int costTraversal(Graph<Type> & graph, int vertex);
-}
+};
 
 template <class Type>
 const int Graph<Type> :: MAXIMUM;
@@ -68,7 +69,7 @@ template <class Type>
 Type& Graph<Type> :: operator[](int vertex)
 {
     assert(vertex < vertexCount);
-    return graphData[Vertex];
+    return graphData[vertex];
 }
 
 //Right hand side operator
@@ -101,14 +102,14 @@ void Graph<Type> :: addVertex(const Type& value)
 
 
 template <class Type>
-void Graph<Type> :: removedEdge(int source, int target)
+void Graph<Type> :: removeEdge(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = false;
 }
 
 template <class Type>
-void Graph<Type> :: removeEdgeUndirected
+void Graph<Type> :: removeEdgeUndirected(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = false;
@@ -116,7 +117,7 @@ void Graph<Type> :: removeEdgeUndirected
 }
 
 template <class Type>
-void Graph<Type> : remoedEdgeCost(int source, int target)
+void Graph<Type> :: removeEdgeCost(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     weightCostMatrix[source][target] = 0;
@@ -124,14 +125,14 @@ void Graph<Type> : remoedEdgeCost(int source, int target)
 }
 
 template <class Type>
-void Graph<Type> : addEdge(int source, int target)
+void Graph<Type> :: addEdge(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = true;
 }
 
 template <class Type>
-void Graph<Type> : addEdgeCost(int source, int target, int cost)
+void Graph<Type> :: addEdgeCost(int source, int target, int cost)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     weightCostMatrix[source][target] = cost;
@@ -139,7 +140,7 @@ void Graph<Type> : addEdgeCost(int source, int target, int cost)
 }
 
 template <class Type>
-void Graph<Type> : addEdgeUndirected(int source, int target)
+void Graph<Type> :: addEdgeUndirected(int source, int target)
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     adjacencyMatrix[source][target] = true;
@@ -147,7 +148,7 @@ void Graph<Type> : addEdgeUndirected(int source, int target)
 }
 
 template <class Type>
-bool Game<Type> :: hadUndirectedConnection(int source, int target) const
+bool Graph<Type> :: hasUndirectedConnection(int source, int target) const
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
 
@@ -158,12 +159,12 @@ bool Game<Type> :: hadUndirectedConnection(int source, int target) const
 }
 
 template <class Type>
-bool Game<Type> :: areConnected(int source, int target) const
+bool Graph<Type> :: areConnected(int source, int target) const
 {
     assert(source >= 0 && source < vertexCount && target >= 0 && target < vertexCount);
     
     bool isAnEdge = false;
-    isAnEdge = adjacencyMatrix[source][target]
+    isAnEdge = adjacencyMatrix[source][target];
     
     return isAnEdge;
 }
@@ -199,7 +200,7 @@ void Graph<Type> :: depthFirstTraversal(Graph<Type> & currentGraph, int vertex, 
     std::set<int> connections = currentGraph.neighbors(vertex);
     set::set<int>::iterator setIteratorl;
     
-    visited[veertex] << ", " << endl;
+    visited[vertex] << ", " << endl;
     
     for(setIterator = connections.begin(); setIterator != connections.end(); setIterator++)
     {
