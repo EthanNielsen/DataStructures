@@ -283,8 +283,39 @@ bool BinarySearchTree<Type> :: contains(Type itemToFind)
 }
 
 template <class Type>
-void BinarySearchTree<Type> :: remove(Type item)
+void BinarySearchTree<Type> :: remove(Type getRidOfMe)
 {
+    if(this->root == nullptr)
+    {
+        cout << "Empty tree so removal is not possible" << endl;
+    }
+    else
+    {
+        BinaryTreeNode<Type> * current = this->root;
+        BinaryTreeNode<Type> * previous = nullptr;
+        bool hasBeenFound = false;
+        
+        while(current != nullptr && !hasBeenFound)
+        {
+            if(current->getData() == getRidOfMe)
+            {
+                hasBeenFound = true;
+            }
+            else
+            {
+                previous = current;
+                if(getRidOfMe < current->getData())
+                {
+                    current = current->getLeftnode();
+                }
+                else
+                {
+                    current = current->getRightNode();
+                }
+                
+                }
+        }
+    }
     
 }
 #endif /* BinarySearchTree_h */
