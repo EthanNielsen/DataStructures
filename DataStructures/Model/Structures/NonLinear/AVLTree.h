@@ -125,4 +125,16 @@ BinaryTreeNode<Type> * AVLTree<Type> :: balanceSubTree (BinaryTreeNode<Type> * p
     return parent;
 }
 
+template <class Type>
+void AVLTree<Type> :: insert(Type item)
+{
+    insertNode(this->getRoot(), item);
+}
+
+template <class Type>
+void AVLTree<Type> :: remove(Type item)
+{
+    removeNode(this->getRoot(), item);
+}
+
 #endif /* AVLTree_h */
