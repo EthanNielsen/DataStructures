@@ -31,7 +31,28 @@ public:
     
     void insert(Type itemToInsert);
     void remove(Type value);
+    
+protected:
+    void destroyTree(BinaryTreeNode<Type> * node);
 };
+
+
+template <class Type>
+BinarySearchTree<Type> :: ~BinarySearchTree()
+{
+    destroyTree(this->root);
+}
+
+template <class Type>
+void BinarySearchTree<Type> :: destroyTree(BinaryTreeNode<Type> * node)
+{
+    if(node != nullptr)
+    {
+        destroyTree(node->getLeftNode());
+        destroyTree(node->getRightNode());
+        delete node;
+    }
+}
 
 /*
  A negative value means the right is greater than the left
