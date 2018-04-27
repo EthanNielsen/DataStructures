@@ -46,14 +46,48 @@ HashTable<Type> :: HashTable()
 template <class Type>
 HashTable<Type> :: ~HashTable()
 {
-    
+    delete [] internalStorage;
 }
 
 template <class Type>
 bool HashTable<Type> :: isPrime(long current)
 {
+    return false;
+}
+
+template <class Type>
+long HashTable<Type> :: findPosition(HashNode<Type> * insert)
+{
+    return -1;
+}
+
+template <class Type>
+long Hashtable<Type> :: handleCollisiton(HashNode<Type> * current, long index)
+{
+    return -1;
+}
+
+template <class Type>
+long Hashtable<Type> :: getSize()
+{
+    return -1;
+}
+
+template <class Type>
+long HashTable<Type> :: getNextPrime()
+{
+    return -1;
+}
+
+template <class Type>
+void Hashtable<Type> :: resize()
+{
     
 }
 
-
+template <class Type>
+void Hashtable<Type> :: insert(Type value)
+{
+    
+}
 #endif /* HashTable_h */
