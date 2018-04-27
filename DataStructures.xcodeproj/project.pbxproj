@@ -67,6 +67,7 @@
 		28819C4F205AE963008EC4DC /* SortingTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SortingTester.hpp; sourceTree = "<group>"; };
 		2891C63C204493160026B302 /* TestingStacksAndQueues.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestingStacksAndQueues.cpp; sourceTree = "<group>"; };
 		2891C63D204493160026B302 /* TestingStacksAndQueues.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestingStacksAndQueues.hpp; sourceTree = "<group>"; };
+		28A4042E20939F6A00D13E64 /* HashNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashNode.h; sourceTree = "<group>"; };
 		28F769EA206AC33B00D00E1F /* GraphTester.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GraphTester.cpp; sourceTree = "<group>"; };
 		28F769EB206AC33B00D00E1F /* GraphTester.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GraphTester.hpp; sourceTree = "<group>"; };
 		28F769ED206AC53600D00E1F /* BinaryTreeNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinaryTreeNode.h; sourceTree = "<group>"; };
@@ -222,6 +223,7 @@
 				28219B04203F49C30023A087 /* DoubleNode.hpp */,
 				28F769ED206AC53600D00E1F /* BinaryTreeNode.h */,
 				28F769EE206AC62C00D00E1F /* N_AryTreeNode.h */,
+				28A4042E20939F6A00D13E64 /* HashNode.h */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
