@@ -52,7 +52,29 @@ HashTable<Type> :: ~HashTable()
 template <class Type>
 bool HashTable<Type> :: isPrime(long current)
 {
-    return false;
+    if(current <= 1)
+    {
+        return false;
+    }
+    else if(current == 2 || current == 3)
+    {
+        return  true;
+    }
+    else if(current % 2 == 0)
+    {
+        return false;
+    }
+    else
+    {
+        for(int next = 3; next <= sqrt(current) +1; next += 2)
+        {
+            if(current % next == 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 template <class Type>
@@ -92,8 +114,7 @@ long Hashtable<Type> :: getSize()
 template <class Type>
 long HashTable<Type> :: getNextPrime()
 {
-    
-    
+    return -1;
 }
 
 template <class Type>
@@ -135,7 +156,27 @@ void Hashtable<Type> :: resize()
 template <class Type>
 void Hashtable<Type> :: insert(Type value)
 {
+    this->size++;
+    if(((this->size * 1.000) / this->capacity) > this->loadFactor)
+    {
+        resize();
+    }
     
+    HashNode<Type> * temp = new HashNode<Type>(value);
+    long index = findPosition(temp);
+    
+    if(internalStorage[index] == nullptr)
+    {
+        internalStorage[index] = temp;
+    }
+    else
+    {
+        long updatedPosition = handleCollision( index);
+        if (updatedPosition != -1)
+        {
+            internal[updatedPosition] = temp;
+        }
+    }
 }
 
 
