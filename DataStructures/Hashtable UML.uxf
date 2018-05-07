@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>130</y>
+      <w>380</w>
+      <h>280</h>
+    </coordinates>
+    <panel_attributes>HashTable
+--
+-HashNode&lt;Type&gt; ** internalStorage
+-long size()
+-long capacity
+-double loadFactor
+-long getNextPrime()
+-bool isPrime(long current)
+-void resize()
+-long findPosition(HashNode&lt;Type&gt;* insertedNode
+-long handleCollision(long index)
+--
++HashTable()
++~HashTable()
++void insert(Type data)
++long getSize()
++HashNode&lt;Type&gt; * get(long index)
++bool contains(HashNode&lt;Type&gt; * value)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>20</x>
+      <y>220</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>Node
+--
+#Type data
+--
++Node()
++Node(Type data)
++void setData(Type data)
++Type getData()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>220</x>
+      <y>510</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>HashNode
+--
+-long key
+--
++HashNode()
++HashNode(Type data)
++long key() const</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>190</x>
+      <y>400</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;80.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>400</y>
+      <w>110</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;110.0;90.0;10.0</additional_attributes>
+  </element>
+</diagram>
