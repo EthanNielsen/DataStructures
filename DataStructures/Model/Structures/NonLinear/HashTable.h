@@ -10,6 +10,8 @@
 #define HashTable_h
 
 #include "../Nodes/HashNode.h"
+#include <cmath>
+#include <assert.h>
 
 template <class Type>
 class Hashtable
@@ -32,6 +34,9 @@ public:
     
     void insert(Type data);
     long getSize();
+    
+    HashNode<Type> * get(long index);
+    bool contains(HashNode<Type> * value);
 };
 
 template <class Type>
@@ -114,7 +119,14 @@ long Hashtable<Type> :: getSize()
 template <class Type>
 long HashTable<Type> :: getNextPrime()
 {
-    return -1;
+    long nextPrime = (this->capacity * 2) + 1;
+    
+    while(!isPrime(nextPrime))
+    {
+        nextPrime += 2;
+    }
+    
+    return nextPrime;
 }
 
 template <class Type>
